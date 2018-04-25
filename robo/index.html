@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://eloquentjavascript.net/2nd_edition/code/ -->
+<html data-livestyle-extension="available"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <!--<base href="..">--><base href=".">
+  <title>Eloquent JavaScript :: Code Sandbox</title>
+
+  <script src="./js/acorn_codemirror.js"></script>
+  <link rel="stylesheet" href="./js/codemirror.css">
+  <link rel="stylesheet" href="./js/ejs.css">
+  <script src="./js/sandbox.js"></script>
+  <script src="./js/chapter_info.js"></script>
+  <script src="./js/code.js"></script>
+
+  <style>
+    .control { font-size: 15px }
+  </style>
+</head>
+
+<body><article style="max-width: 50em;">
+    <select id="chapters" class=control></select>
+  <select id="per_chapter" class=control></select>
+  <h1>JavaScript Code Sandbox<div style="font-size: 70%"><a>Eloquent JavaScript</a></div></h1>
+
+  <p class="p3 ft3">Javascript <a>JavaScript es el lenguaje mas demandado por los empleadores.</a> porque? vino a dar soluciones en mundo web. javascript se posiciona cada vez mas en las diferentes areas del mundo del desarrollo de software y de sistemas.</p>
+  <p class="p3 ft3">En principio el lenguaje de javascript tuvo una historia interzante puesto que fue el patito feo por muchos años hasta que surgio como uno de los lenguajes mas usados.</p>
+  <p class="p3 ft3">Es tan importante que ahora esta invadiendo nuevos conceptos y paradigmas.</p>
+	<p>
+      2018 Infome de habilidades de los desarrolladores. de <a href="https://research.hackerrank.com/developer-skills/2018/">hackerrank</a> 
+  </p>
+  
+  <p>
+    <button id="run" class="control">run code</button>
+  </p>
+
+  <div class="editor-wrap">
+    <textarea id="editor" style="display: none;"></textarea>
+    <!-- <div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 26px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -15px; border-right-width: 15px; min-height: 104px; min-width: 488px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 10px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Run code here in the context of Chapter 0</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">sum</span>(<span class="cm-variable">range</span>(<span class="cm-number">1</span>, <span class="cm-number">10</span>)));</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 15px; width: 1px; border-bottom: 0px solid transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="height: 119px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 16px;"></div></div></div></div> -->
+    <div class="sandbox-output" id="output"></div>
+  </div>
+  <img src="ilustracion.png"/>
+
+  <div id="fileInfo" style="">
+    These files contain this chapter’s project code:
+    <ul id="files" style="font-family: &#39;PT Mono&#39;, monospace; margin-top: 0"><li><a href="https://eloquentjavascript.net/2nd_edition/code/intro.js">intro.js</a></li></ul>
+  </div>
+
+  <p id="exercise_info" style="display: none;">If you've solved the exercise and want to compare your code with
+  mine, or you <em>really</em> tried, but can't get your code to work,
+  you can <button id="solution" style="color: #c22;" class="control">look at the
+  solution</button> (or <a id="download">download it</a>).</p>
+
+  <p id="box_info">
+    The base environment for this chapter (if any) is available in the
+    sandbox above, allowing you to run the chapter's examples by
+    simply pasting them into the editor.
+  </p>
+</article>
+</body></html>
